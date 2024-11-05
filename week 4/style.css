@@ -55,7 +55,7 @@ button.AOCW {
 }
 
 
-
+/* here we take out all the style tgt for easier maintain */
 .style-round {
     border-radius: 20px;
     padding: 10px;
@@ -73,6 +73,7 @@ button.AOCW {
 
 }
 
+/* header */
 .setbg {
     color: rgb(255, 255, 255);
     background-color: rgb(246, 224, 196);
