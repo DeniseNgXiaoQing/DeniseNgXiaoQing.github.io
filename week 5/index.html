@@ -10,6 +10,9 @@
     .container {
         display: flex;
         gap: 10px;
+        /* Space between rows */
+        margin-bottom: 10px;
+
     }
 
     .column {
@@ -25,11 +28,46 @@
     .column2 {
         /* double size width for this column */
         flex: 2;
-        background-color: lightgreen;
+        background-color: rgb(224, 199, 244);
+    }
+
+    .column3 {
+        flex: 2;
+        background-color: rgb(224, 199, 244);
+    }
+
+    .column4 {
+        background-color: lightblue;
+    }
+
+    .heading {
+        margin-bottom: 10px;
+    }
+
+    .header {
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .footer {
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px;
+        text-align: center;
     }
 </style>
 
 <body>
+    <!-- Top -->
+    <div class="heading">
+        <div class="heading header">
+            <h1>Title here</h1>
+        </div>
+    </div>
+
+    <!-- First row -->
     <div class="container">
         <div class="column column1">
             <h2>Column 1</h2>
@@ -40,8 +78,28 @@
             <h2>Column 2</h2>
             <p>hello ndjndwndjwnjdnkdnweidknwkednemfnjkdbacsrnfirf chfqkagtebfjkdekfn4e bfhikfhi aygrgbg </p>
         </div>
-
     </div>
+
+    <!-- Second row -->
+    <div class="container">
+        <div class="column column3">
+            <h2>Column 3</h2>
+            <p>hello ndjndwndjwnjdnkdnweidknwkednemfnjkdbacsrnfirf chfqkagtebfjkdekfn4e bfhikfhi aygrgbg </p>
+        </div>
+
+        <div class="column column4">
+            <h2>Column 4</h2>
+            <p>hello ndjndwndjwnjdnkdnweidknwkednemfnjkdbacsrnfirf chfqkagtebfjkdekfn4e bfhikfhi aygrgbg </p>
+        </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="heading">
+        <div class="heading footer">
+            <h1>Ending here</h1>
+        </div>
+    </div>
+
 </body>
 
 </html>
