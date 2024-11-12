@@ -2,36 +2,52 @@
 <html>
 
 <head>
-    <title>W5 Exe 1</title>
+    <title>W5 Exe 3</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
     <style>
+        /* Navigation Bar */
         #nav {
             display: flex;
             gap: 15px;
             align-items: center;
             margin-right: auto;
+            padding: 10px;
         }
+
 
         a {
             text-decoration: none;
             color: black;
         }
 
+
+        /* Header Styles */
         header {
             padding: 10px;
-            background-color: rgb(246, 237, 204);
+            background-image: url("image/sky.jpg");
             display: flex;
             align-items: center
         }
 
-        .brew {
+        .logo {
             font-size: 24px;
-            font-family: Arial, sans-serif;
+            font-family: "Azeret Mono", monospace;
+            font-weight: 500;
+            letter-spacing: 5px;
         }
 
 
+        /* Info Section Styling */
         .info {
+            font-family: "Azeret Mono", monospace;
+            font-weight: 250;
             gap: 15px;
             display: flex;
             align-items: center;
@@ -39,12 +55,21 @@
         }
 
         button {
+            font-family: "Azeret Mono", monospace;
             background-color: rgb(8, 8, 8);
             color: white;
-            border: 0;
-            padding: 10px;
-            padding-left: 25px;
-            padding-right: 25px;
+            border: 2px solid transparent;
+            /* Set a transparent border initially */
+            border-radius: 10px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease-in;
+            /* Smooth transition effect */
+        }
+
+        button:hover {
+            background-color: white;
+            color: black;
+            border-color: black;
         }
     </style>
 
@@ -55,19 +80,14 @@
     <header>
 
         <div id="nav">
-            <img src="image/account.png" height="20px">
-            <div class="Acc">
-                <div>Denise Ng Xiao Qing</div>
-                <div>Virtual Assistant</div>
-            </div>
-
+            <div class="logo">AUTONO</div>
         </div>
 
         <div class="info">
-            <img src="image/account.png" height="20px">
-            <div style="margin-left: -10px;">Log in</div>
-            <div>Cart (0)</div>
-            <button>Order Online</button>
+            <div>Technology</div>
+            <div>About</div>
+            <div>Careers</div>
+            <button>Subsribe</button>
         </div>
     </header>
 
