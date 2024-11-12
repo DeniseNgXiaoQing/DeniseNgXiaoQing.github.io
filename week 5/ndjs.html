@@ -14,6 +14,8 @@
         body {
             font-family: "DotGothic16", serif;
             letter-spacing: 3px;
+            margin: 0;
+            /* Reset margin for the body */
         }
 
         /* Navigation */
@@ -48,36 +50,32 @@
             display: flex;
             gap: 15px;
             align-items: center;
+            justify-content: center;
+            /* Center-aligns icons */
+            margin-bottom: 10px;
         }
-
-
 
         /* Middle */
         .content {
-            /* image */
             background-image: url("image/BackG 2.jpg");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-
-
             padding: 20px;
             display: flex;
             flex-direction: column;
-            /* Stack elements vertically */
             align-items: center;
-            /* Center elements horizontally */
             min-height: 100vh;
             image-rendering: crisp-edges;
+            margin-bottom: 0;
+            /* Remove bottom margin */
         }
 
         .circle-img {
             width: 200px;
             height: 200px;
             object-fit: cover;
-            /* Ensures the image fills the circle without distortion */
             border-radius: 50%;
-            /* Make the image circular */
         }
 
         .name {
@@ -99,19 +97,17 @@
             color: rgb(67, 66, 66);
         }
 
-
-        /* column styling */
+        /* Column styling */
         .container {
             display: flex;
             gap: 10px;
             margin-bottom: 10px;
             text-align: center;
             flex-wrap: wrap;
-            /* Ensures it wraps to the next line when needed */
         }
 
         .column1 {
-            background-color: rgb(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
             flex: 1;
             padding: 10px;
@@ -122,38 +118,25 @@
             margin-bottom: 10px;
             text-align: center;
             flex-wrap: wrap;
-            background-color: rgb(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
             width: 56%;
-            /* Ensures the box takes full width */
             padding-left: 30px;
-            /* Increase left padding */
             padding-right: 30px;
-            /* Increase right padding */
             box-sizing: border-box;
-            /* Includes padding in the box width */
         }
 
-
+        /* Footer Styling */
         .footer {
-            background-color: #7EACB5;
+            background-color: #674636;
             color: white;
             padding: 15px;
+            display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             margin-top: 0;
-            font-size: 10px;
             text-align: center;
-        }
-
-        .social-media {
-            display: flex;
-            gap: 15px;
-            margin-bottom: -10px;
-            align-items: center;
-            justify-content: center;
-            /* Center-aligns icons */
         }
     </style>
 </head>
@@ -176,40 +159,37 @@
             <a href="https://github.com/DeniseNgXiaoQing">
                 <img style="margin-right: 10px;" src="image/github.png" height="25px">
             </a>
-
         </div>
     </header>
-
-
 
     <!-- Middle -->
     <div class="content">
         <img style="margin-top: 20px;" src="image/mypic.JPG" class="circle-img">
         <div class="name">Denise Ng Xiao Qing</div>
         <div class="name">Web Publishing</div>
-        <p class="intro">Hi I'm Denise you can call me Nise too.Flowers can made my day ,it would be better to have a
-            RnB music and a
-            cup of hot coffee at the same time! 19 this year .Feel free to click the button below to enter my world!
+        <p class="intro">Hi I'm Denise you can call me Nise too. Flowers can make my day; it would be better to have RnB
+            music and a cup of hot coffee at the same time! 19 this year. Feel free to click the button below to enter
+            my
+            world!
         </p>
 
-        <!-- column -->
+        <!-- Columns -->
         <div class="container">
-            <!-- week 2 3 4  -->
-            <div class="column1 ">
+            <div class="column1">
                 <h2 class="Week"><img src="image/check.png" style="width: 25px; vertical-align: middle;"> Week 2</h2>
                 <hr>
                 <p>Exercise 1</p>
                 <p>Exercise 2</p>
             </div>
 
-            <div class="column1 ">
+            <div class="column1">
                 <h2><img src="image/check.png" style="width: 25px; vertical-align: middle;"> Week 3</h2>
                 <hr>
                 <p>Exercise 1</p>
                 <p>Exercise 2</p>
             </div>
 
-            <div class="column1 ">
+            <div class="column1">
                 <h2><img src="image/check.png" style="width: 25px; vertical-align: middle;"> Week 4</h2>
                 <hr>
                 <p>Exercise 1</p>
@@ -218,13 +198,11 @@
         </div>
 
         <div class="W5">
-            <!-- week 5 -->
             <h2 class="Week"><img src="image/check.png" style="width: 25px; vertical-align: middle;"> Week 5</h2>
             <hr>
             <p>Exercise 1</p>
             <p>Exercise 2</p>
         </div>
-
     </div>
 
     <!-- Footer -->
