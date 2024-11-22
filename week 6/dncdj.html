@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Responsive Navbar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Base Styling */
+        body {
+            margin: 0;
+            font-family: 'Azeret Mono', monospace;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #333333;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        /* Logo Styling */
+        .logo-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo {
+            height: 70px;
+            width: auto;
+        }
+
+        /* Navigation Links Styling */
+        .info {
+            flex: 1;
+            display: flex;
+            gap: 30px;
+            position: relative;
+        }
+
+        .info a {
+            font-weight: 500;
+        }
+
+        /* Dropdown Styling */
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #555;
+            color: white;
+            min-width: 150px;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        .submenu a {
+            display: block;
+            padding: 8px 15px;
+            text-align: left;
+        }
+
+        .submenu a:hover {
+            background-color: #777;
+        }
+
+        .menu-abt:hover .submenu,
+        .menu-svc:hover .submenu {
+            display: block;
+        }
+
+        .menu-abt,
+        .menu-svc {
+            position: relative;
+        }
+
+        /* Responsive Styling */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .logo-container {
+                margin-bottom: 10px;
+            }
+
+            .info {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                /* Center align the links */
+                gap: 10px;
+                /* Adjust spacing between links */
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Logo -->
+        <div class="logo-container">
+            <img src="image/logo.png" class="logo" alt="Logo">
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="info">
+            <a href="#">Home</a>
+
+            <div class="menu-abt">
+                <a href="#">About</a>
+                <div class="submenu">
+                    <a href="#">Mission</a>
+                    <a href="#">Vision</a>
+                </div>
+            </div>
+
+            <div class="menu-svc">
+                <a href="#">Services</a>
+                <div class="submenu">
+                    <a href="#">Web Development</a>
+                    <a href="#">App Development</a>
+                    <a href="#">SEO Services</a>
+                </div>
+            </div>
+
+            <a href="#" class="contact">Contact</a>
+        </div>
+    </header>
+</body>
+
+</html>
