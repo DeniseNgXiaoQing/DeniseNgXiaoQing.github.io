@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>W6 Exe 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* General styles (desktop-first approach) */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .info {
+            flex: 1;
+            margin-left: 37px;
+            margin-right: 37px;
+            max-width: 50%;
+            padding-right: 20px;
+        }
+
+        .info h2 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .info p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .info button {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 16px;
+            background-color: #c2b9b3;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .info button:hover {
+            background-color: #675950;
+        }
+
+        .pic {
+            flex: 1;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .pic img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                /* Stack items vertically */
+                text-align: left;
+                /* Center align content */
+            }
+
+            .pic {
+                order: -1;
+                max-width: 100%;
+                /* Full width for both sections */
+
+            }
+
+            .info {
+
+                max-width: 100%;
+                /* Full width for both sections */
+                padding: 10px;
+            }
+
+            .info {
+                padding-top: 0;
+                /* No extra spacing on top for info */
+            }
+
+            .pic img {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="info">
+            <h2 class="Week">Elevate your style, embrace timeless elegance</h2>
+            <br>
+
+            <p>Discover a world of exquisite craftsmanship and unparalleled beauty with our stunning collection of
+                fine jewelry. Each piece is meticulously designed to capture the essence of grace and sophistication,
+                reflecting your unique sense of style.</p>
+
+            <button>view catalog</button>
+        </div>
+
+
+        <!-- Image -->
+        <div class="pic">
+            <img src="image/lady.jpg" alt="Lady with jewelry">
+        </div>
+    </header>
+</body>
+
+</html>
