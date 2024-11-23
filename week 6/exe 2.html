@@ -60,8 +60,6 @@
 
         .icon {
             align-items: center;
-            height: 15px;
-            /* Icon size */
         }
 
         .services-container {
@@ -74,6 +72,10 @@
         .contact {
             margin-right: 20px;
             /* Adds space to the right of Contact */
+        }
+
+        .menu-home {
+            position: relative;
         }
 
         .menu-svc {
@@ -148,6 +150,10 @@
                 /* Remove auto margin */
             }
 
+            .ihome {
+                display: none;
+            }
+
             .info a {
                 text-align: center;
             }
@@ -170,7 +176,13 @@
 
         <div class="info">
 
-            <a href="#">Home</a>
+
+            <div class="menu-home">
+                <div class="icon-container">
+                    <a href="#">Home</a>
+                    <img src="image/home.png" height="20px" class="ihome">
+                </div>
+            </div>
 
             <div class="menu-abt">
                 <div class="icon-container">
