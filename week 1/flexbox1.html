@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<!-- head is the tab tittle -->
+
+<head>
+    <title>W1 Exe 1-flexbox1</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #F6F5EF;
+        margin: 30px;
+        align-items: center;
+    }
+
+
+    .tittle {
+        text-align: center;
+    }
+
+
+    h1 {
+        margin: 20px 0px 0px 0px;
+    }
+
+
+    p {
+        margin: 10px 0px;
+        color: dimgray;
+    }
+
+
+    h6 {
+        margin: 30px 0px;
+    }
+
+
+    .firsttext {
+        font-family: "Oxygen", sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .firsthead {
+        font-family: "Oxygen", sans-serif;
+        margin: 0px 0px 28px 0px;
+        font-size: 50px;
+
+    }
+
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 50px auto;
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .column {
+        flex: 1 1 calc(33.333% - 20px);
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        min-width: 280px;
+        padding: 20px;
+    }
+
+    .pic {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 5px;
+        border-bottom: 1px solid #eee;
+    }
+</style>
+
+
+
+<!-- Start content with body -->
+
+<body>
+    <div class="all">
+        <div class="tittle">
+            <!-- Heading -->
+            <h6 class="firsttext">Building a better future</h6>
+
+            <h1 class=" firsthead">We construct & deliver quality projects</h1>
+
+            <!-- Intro -->
+            <p>Meet our customers and explore their success stories with us</p>
+
+
+        </div>
+
+        <div class="container">
+            <div class="column">
+                <img src="images/custom-img-017-copyright.jpg" class="pic">
+                <h1>Residental projects</h1>
+                <p>We build sustainable and modern homes for comfortable living.</p>
+            </div>
+
+            <div class="column">
+                <img src="images/custom-img-018-copyright.jpg" class="pic">
+                <h1>Commercial spaces</h1>
+                <p>We create efficient,inspiring workspaces for businesses of all sizes.</p>
+            </div>
+
+            <div class="column">
+                <img src="images/custom-img-019-copyright.jpg" class="pic">
+                <h1>Infrastructure works</h1>
+                <p>We develop strong,reliable infrastructure for growing communities.</p>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>
