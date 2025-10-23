@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Layout</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #4b0c1c;
+            color: #fff;
+        }
+
+        .team-section {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 60px;
+            padding: 100px 50px;
+            flex-wrap: wrap;
+        }
+
+        .member {
+            color: #e3b1a6;
+            transition: transform 0.3s ease;
+            flex: 1 1 250px;
+            max-width: 300px;
+        }
+
+        .member img {
+            width: 250px;
+            display: block;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            filter: grayscale(100%);
+            transition: filter 0.6s ease, transform 0.3s ease;
+        }
+
+        .name {
+            text-transform: uppercase;
+            font-weight: 400;
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+            color: #d17070;
+        }
+
+        .role {
+            color: #c9a7a6;
+        }
+
+        .line {
+            height: 1px;
+            background-color: #d17070;
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        /* "stair" layout effect */
+        .member:nth-child(2) {
+            transform: translateY(40px);
+        }
+
+        .member:nth-child(3) {
+            transform: translateY(80px);
+        }
+
+        .member:nth-child(4) {
+            transform: translateY(120px);
+        }
+
+        /* Hover image */
+        .member img:hover {
+            filter: grayscale(0%);
+            transform: scale(1.03);
+        }
+
+        /* Responsive: 2 columns on smaller screens */
+        @media (max-width: 1350px) {
+            .team-section {
+                justify-content: center;
+                gap: 40px 60px;
+            }
+
+            .member {
+                flex: 1 1 calc(50% - 60px);
+                transform: none;
+            }
+
+            .member:nth-child(2) {
+                transform: translateY(0px);
+            }
+
+            .member:nth-child(4) {
+                transform: translateY(80px);
+            }
+        }
+
+        /* Even smaller screens (stack 1x4 on phones) */
+        @media (max-width: 500px) {
+            .team-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .member {
+                flex: none;
+                width: 80%;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="team-section">
+        <div class="member">
+            <div class="name">Joseph Barnes</div>
+            <hr class="line" />
+            <img src="images/stuff1.jpg" alt="Joseph Barnes" />
+            <div class="role">Manager</div>
+        </div>
+
+        <div class="member">
+            <div class="name">Earl Wood</div>
+            <hr class="line" />
+            <img src="images/stuff2.jpg" alt="Earl Wood" />
+            <div class="role">Bartender</div>
+        </div>
+
+        <div class="member">
+            <div class="name">Bobby Johnson</div>
+            <hr class="line" />
+            <img src="images/stuff3.jpg" alt="Bobby Johnson" />
+            <div class="role">Bartender</div>
+        </div>
+
+        <div class="member">
+            <div class="name">Jane Morgan</div>
+            <hr class="line" />
+            <img src="images/stuff4.jpg" alt="Jane Morgan" />
+            <div class="role">Bartender</div>
+        </div>
+    </div>
+</body>
+
+</html>
