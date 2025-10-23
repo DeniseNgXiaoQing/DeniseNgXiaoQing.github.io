@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>W4 Exe 2-Navigation Bar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <style>
+        body {
+            margin: 20px 30px;
+            font-family: "Oxygen", sans-serif;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #menubar {
+            display: flex;
+            align-items: center;
+        }
+
+
+        #callme {
+            display: flex;
+        }
+
+        a {
+            text-decoration: none;
+            /* to remove default underline */
+            padding: 0px 20px;
+            color: black;
+        }
+
+        a:hover {
+            color: #F9612B;
+        }
+
+
+        .btn_contact {
+            font-size: 15px;
+            padding: 15px 20px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            color: white;
+            background-color: #F9612B;
+        }
+
+        .phonering {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        #pn {
+            padding-left: 10px;
+        }
+
+        /* hamburger icon (hidden by default) */
+        #menu-icon {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+
+        /* ===== MAIN CONTENT ===== */
+        .main {
+            background-image: url("images/bgi.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 50px;
+            height: 800px;
+            border-radius: 15px;
+            color: white;
+        }
+
+        .main h1 {
+            max-width: 700px;
+            font-size: 80px;
+            margin-bottom: 10px;
+            font-weight: 1000;
+            text-transform: uppercase;
+            line-height: 1;
+            color: white;
+        }
+
+        .main p {
+            max-width: 700px;
+            font-size: 18px;
+            color: white;
+            line-height: 1.6;
+        }
+
+        .main-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-one,
+        .btn-two {
+            font-size: 16px;
+            padding: 15px 30px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        /* Button 1 */
+        .btn-one {
+            background-color: #FFE269;
+            color: black;
+        }
+
+        .btn-one:hover {
+            background-color: #cba614;
+        }
+
+        /* Button 2 (outlined) */
+        .btn-two {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-two:hover {
+            background-color: white;
+            color: black;
+        }
+
+
+        /* ===== Statement===== */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 250px);
+            gap: 20px;
+            position: absolute;
+            right: 60px;
+        }
+
+        .stat-box {
+            background-color: white;
+            color: black;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .stat-box h2 {
+            color: #F9612B;
+            font-size: 60px;
+            margin: 0;
+        }
+
+        .stat-box p {
+            color: black;
+            margin: 0;
+        }
+
+
+
+
+
+        /* ---------------- RESPONSIVE---------------------------------------------------- */
+        @media (max-width: 1050px) {
+
+            #menubar,
+            .btn_contact {
+                display: none;
+            }
+
+            #menu-icon {
+                display: block;
+                margin-left: 15px;
+            }
+
+            #callme {
+                display: flex;
+                align-items: center;
+            }
+
+            #pn {
+                padding-left: 8px;
+                font-size: 16px;
+            }
+
+            .stats {
+                margin: 60px auto 0;
+                display: grid;
+                gap: 25px;
+                grid-template-columns: repeat(2, minmax(200px, 1fr));
+            }
+
+            .stat-box {
+                width: 85%;
+                max-width: 280px;
+                padding: 25px;
+            }
+
+            .stat-box h2 {
+                font-size: 48px;
+            }
+
+            .stat-box p {
+                font-size: 15px;
+            }
+
+            .main h1 {
+                font-size: 60px;
+            }
+
+            .main p {
+                font-size: 16px;
+            }
+        }
+
+
+
+        /* ---------------- RESPONSIVE----------------------------------------------------- */
+
+        @media (max-width: 650px) {
+            .phonering {
+                display: none;
+            }
+
+            .main h1 {
+                font-size: 40px;
+            }
+
+            .main p {
+                font-size: 14px;
+            }
+
+            .stats {
+                position: static;
+                margin: 40px auto 0;
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-items: center;
+                text-align: center;
+                gap: 20px;
+                width: 100%;
+            }
+
+            .stat-box {
+                width: 90%;
+                max-width: 500px;
+                padding: 15px 25px;
+                border-radius: 15px;
+            }
+
+            .stat-box h2 {
+                font-size: 45px;
+            }
+
+            .stat-box p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <!-- Top navigation bar -->
+        <div class="topbar">
+            <img src="images/logo-light-retina.png" height="35px">
+
+
+            <div id="menubar">
+                <div><a href="#">Home</a></div>
+                <div><a href="#">Services</a></div>
+                <div><a href="#">Work</a></div>
+                <div><a href="#">Project Details</a></div>
+                <div><a href="#">Contact</a></div>
+            </div>
+
+            <div id="callme">
+                <div class="phonering">
+                    <img src="images/call.png" height="35px" class="icon">
+                    <a id="pn" href="#">555-123-4567</a>
+                </div>
+                <button class="btn_contact">Contact</button>
+
+                <div id="menu-icon">☰</div>
+            </div>
+        </div>
+
+
+        <!-- Hero text content -->
+        <div class="main">
+            <h1>Modern Foundations</h1>
+            <p>Your trusted partner for cutting-edge foundation construction.
+                We deliver robust and reliable solutions tailored to your project’s needs
+            </p>
+
+            <div class="main-buttons">
+                <button class="btn-one">Quote Request</button>
+                <button class="btn-two">Our Portfolio</button>
+            </div>
+
+            <div class="stats">
+                <div class="stat-box">
+                    <h2>50+</h2>
+                    <p>Multi-Story Projects</p>
+                </div>
+                <div class="stat-box">
+                    <h2>174</h2>
+                    <p>Residential Designs</p>
+                </div>
+                <div class="stat-box">
+                    <h2>21</h2>
+                    <p>Years in Business</p>
+                </div>
+                <div class="stat-box">
+                    <h2>360+</h2>
+                    <p>Renovation Success</p>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+</body>
+
+</html>
